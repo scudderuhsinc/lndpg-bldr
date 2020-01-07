@@ -40,6 +40,10 @@ You have to add [CORS-settings](#cors-settings-for-the-studio) for the studio de
 - **Build command**: `npm run build-web`
 - **Publish directory**: `web/_site`
 
+#### Creating Static Files
+- [with 11.ty](https://www.11ty.dev/docs/)
+- [templating with Nunjucks](https://mozilla.github.io/nunjucks/)
+
 ## Deploy on `now`
 
 The `now.json` has configuration for deploying both the frontend and the studio on _one_ now deployment. The web frontend can be browsed from the root of your now domain. The Studio can be accessed on `https://<your-domain>.now.sh/studio`.

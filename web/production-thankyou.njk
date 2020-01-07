@@ -1,0 +1,26 @@
+---
+layout: layouts/html.njk
+data: getYear
+templateClass: thankyou
+tags: thank
+pagination:
+  alias: page
+  data: pages
+  size: 1
+eleventyExcludeFromCollections: true
+permalink: "/{{ page.links.local | slug }}/thankyou.html"
+---
+
+<div class="container-inner_col content-container">
+  <div class="grid-row">
+    <p>page.thankyou</p>
+  </div>
+  <div class="grid-row">
+    <div class="grid-1-2">
+      <p>Left Copy</p>
+    </div>
+    <div class="grid-1-2">
+      <p>Right Copy</p>
+    </div>
+  </div>
+</div>

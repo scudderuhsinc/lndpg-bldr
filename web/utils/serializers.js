@@ -1,7 +1,12 @@
-module.exports = {
+//const imageUrl=require('./imageUrl')
+
+module.exports={
   types: {
-    authorReference: (props) => `[${props.node.name}](/authors/${props.node.slug.current})`, // JSON.stringify(props, null, 2)
-    code: props =>
-      '```' + props.node.language + '\n' + props.node.code + '\n```'
+    //code: props =>
+    //  '```'+props.node.language+'\n'+props.node.code+'\n```',
+    code: ({ node }) =>
+      '```'+node.language+'\n'+node.code+'\n```' //,
+    //mainImage: ({ node }) => `![${node.alt}](${imageUrl(node).width(600).url()})` // ,
+    //heroImage: ({ node }) => `![${node.alt}](${imageUrl(node).url()})`
   }
 }

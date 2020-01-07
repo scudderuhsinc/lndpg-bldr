@@ -1,0 +1,35 @@
+---
+layout: layouts/html.njk
+data: getYear
+templateClass: home
+tags: home
+pagination:
+  alias: page
+  data: pages
+  size: 1
+eleventyExcludeFromCollections: true
+permalink: "/{{ page.links.local | slug }}/index.html"
+---
+<div id="form" class="container-inner_col content-container">
+
+    <div class="grid-row top-copy">
+      <div class="left-col">
+        {{ page.main | markdownify | safe }}
+      </div>
+      <div class="right-col">
+          <div class="form-container">
+            <p>page.Form</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="grid-row teaser-copy">
+      <div class="left-col">
+        {{ page.lftCol | markdownify | safe }}
+      </div>
+      <div class="right-col">
+        {{ page.rtCol | markdownify | safe }}
+      </div>
+    </div>
+
+</div>
