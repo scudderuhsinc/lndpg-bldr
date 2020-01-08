@@ -4,6 +4,10 @@ const util=require('util')
 
 module.exports=function (eleventyConfig) {
 
+  // Find and copy any `png` files, maintaining directory structure.
+  // UHS Footer Logo
+  //eleventyConfig.addPassthroughCopy("*.png");
+
   eleventyConfig.addFilter("debug", function (value) {
     return util.inspect(value, { compact: false })
   });

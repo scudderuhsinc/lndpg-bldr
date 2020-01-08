@@ -6,15 +6,28 @@
     <title>{{ page.description }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
       {# <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}"> #}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/scudderuhsinc/UHStyles@master/beta/styles.min.css">  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/scudderuhsinc/UHStyles@master/beta/styles.min.css">
     {% set css %}
       {% include "style.css" %}
     {% endset %}
     <style>
       {{ css | cssmin | safe }}
     </style>
+    <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',' => UNIQUE ID HERE <= ');</script>
+    <!-- End Google Tag Manager -->
   </head>
-  <body class="main">
+  <body class="main {{ page.links.local | slug }}">
+
+    <!-- Google Tag Manager (noscript) -->
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=`=> UNIQUE ID HERE <=`" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+      </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header>
       <div class="container-inner_col">
@@ -70,12 +83,18 @@
       </div>  
     </div>
 
-    <footer class="full-width call-out_alt-grey">
+    <footer class="full-width">
       <div class="container-inner_col">
-        <p>UHS Logo</p>
-        <p>{{ page.owner }} is owned and operated by a subsidiary of Universal Health Services, Inc. (UHS), a King of Prussia, PA-based company, that is one of the largest healthcare management companies in the nation.The information on this website is provided as general health guidelines and may not be applicable to your particular health condition. Your individual health status and any required medical treatments can only be properly addressed by a professional healthcare provider of your choice. Remember: There is no adequate substitution for a personal consultation with your physician. Neither Texoma Medical Center, or any of their affiliates, nor any contributors shall have any liability for the content or any errors or omissions in the information provided by this website.</p>
-        <p>The information, content and artwork provided by this website is intended for non-commercial use by the reader. The reader is permitted to make one copy of the information displayed for his/her own non-commercial use. The making of additional copies is prohibited.</p>
-        <p>©{{ getYear }} {{ page.owner }}. All rights reserved.</p>
+        <div class="grid-row">
+          <div class="grid-1-6">
+            <img src="https://www.uhsinc.com/wp-content/uploads/2020/01/uhs_footer-logo.png" alt="Universal Health Services, Inc." />
+          </div>
+          <div class="grid-5-6">
+            <p>{{ page.owner }} is owned and operated by a subsidiary of Universal Health Services, Inc. (UHS), a King of Prussia, PA-based company, that is one of the largest healthcare management companies in the nation.The information on this website is provided as general health guidelines and may not be applicable to your particular health condition. Your individual health status and any required medical treatments can only be properly addressed by a professional healthcare provider of your choice. Remember: There is no adequate substitution for a personal consultation with your physician. Neither Texoma Medical Center, or any of their affiliates, nor any contributors shall have any liability for the content or any errors or omissions in the information provided by this website.</p>
+            <p>The information, content and artwork provided by this website is intended for non-commercial use by the reader. The reader is permitted to make one copy of the information displayed for his/her own non-commercial use. The making of additional copies is prohibited.</p>
+            <p class="copyright">©{{ getYear }} {{ page.owner }}. All rights reserved.</p>
+          </div>
+        </div>
       </div>
     </footer>
 

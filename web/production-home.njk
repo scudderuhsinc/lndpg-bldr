@@ -18,7 +18,40 @@ permalink: "/{{ page.links.local | slug }}/index.html"
       </div>
       <div class="right-col">
           <div class="form-container">
-            <p>page.Form</p>
+            <h3>{{ page.description }}</h3>
+            <p class="instructions">To learn more, fill out the form below and we’ll respond within one business day, or call <a href="tel:{{ page.contact.phone }}">{{ page.contact.phone }}</a>.
+            <form name="contact" method="POST" data-netlify="true" action="thankyou.html">
+              <p>
+                <label>First Name:<br>
+                <input type="text" name="name-first" required /></label>   
+              </p>
+              <p>
+                <label>Last Name:<br>
+                <input type="text" name="name-last" required /></label>   
+              </p>
+              <p>
+                <label>Phone Number:<br>
+                <input type="tel" name="phone" required /></label>
+              </p>
+              <p>
+                <label>Email Address:<br>
+                <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>
+                  How would you like to be contacted?<br>
+                  <input type="radio" name="followup" value="email" required> Email<br>
+                  <input type="radio" name="followup" value="call" checked> Phone Call<br>
+                </label>
+              </p>
+              <p>
+                <label><input type="checkbox" name="subscribe" value="yes" checked> Please send me updates from {{ page.owner }}</label>
+              </p>
+              <div data-netlify-recaptcha="true"></div>
+              <p>
+                <button type="submit">Request Appointment</button>
+              </p>
+            </form>
           </div>
       </div>
     </div>

@@ -1,11 +1,10 @@
 /*
  * Body Styles
  */
-body {
+body, h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Quicksand", sans-serif;
   font-style: normal;
   color: #144b86;
 }
@@ -31,17 +30,18 @@ h3,
   font-style: normal;
   margin-top: 0;
   margin-bottom: 20px;
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 body p {
   color: #363636;
   font-size: 1.5rem;
-  line-height: 1.6;
+  line-height: 2.5rem;
 }
 body footer p {
   font-size: .75rem;
   line-height: .9375rem;
 }
+
 /*
  * Header Styles
  */
@@ -168,9 +168,69 @@ header a.phone:hover{
  .form-container {
   background-color: rgba(20, 75, 134, 0.85);
   padding: 2% 4%;
+  border-radius: 3px;
+}
+.form-container h3 {
+  color:#ffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25em;
+  margin: 20px 0;
+}
+.form-container p.instructions {
+  margin: 20px 0 30px;
 }
 .form-container p {
   color:#ffff;
+  margin: 10px 0;
+}
+.form-container a {
+  color: #fff;
+  text-decoration: none;
+}
+.form-container a:hover {
+  color: rgb(203, 221, 255);
+  text-decoration: underline;
+}
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container input[type=tel],
+.form-container button[type=submit] {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-transform: inherit;
+  border-radius: 3px;
+}
+.form-container input[type=text]:focus,
+.form-container input[type=email]:focus,
+.form-container input[type=tel]:focus {
+  border: 1px solid #144b86;
+}
+.form-container input[type=radio],
+.form-container input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+}
+.form-container input[type=radio]:focus,
+.form-container input[type=checkbox]:focus {
+  border: 1px solid #144b86;
+}
+.form-container button[type=submit] {
+  background: #1091cc;
+  color: #ffffff;
+  border: 1px solid #1091cc;
+
+}
+.form-container button[type=submit]:focus {
+  background: #144b86;
+  color: #ffffff;
+  border: 1px solid #144b86;
 }
 
 /*
@@ -190,7 +250,7 @@ header a.phone:hover{
 .cta-band_call h3 {
   font-size: 42px;
   color: #fff;
-  margin: 0;
+  margin: 20px 0;
 }
 .cta-band_call a {
   color: #fff;
@@ -217,6 +277,21 @@ header a.phone:hover{
 /*
  * Footer Styles
  */
- footer.full-width {
-   margin-bottom: 0;
- }
+footer.full-width {
+  padding: 45px 0;
+  margin-bottom: 0;
+}
+footer img { margin-top: 12px; }
+footer p.copyright {
+  margin-top: 65px;
+}
+
+/*
+ * Blue Footer (default)
+ * -------------
+ * tmc-woman
+ */
+footer,
+body.tmc-women footer { background-color: #0d325a; }
+footer p,
+body.tmc-women footer p { color:#ffffff; }

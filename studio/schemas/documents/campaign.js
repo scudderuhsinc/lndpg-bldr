@@ -13,7 +13,7 @@ export default {
       name: 'description',
       type: 'string',
       title: 'Description',
-      description: `A description for campaign listings.`
+      description: `A description for campaign listings and displayed in <html> <head> <title>`
     },
     {
       name: 'schedual',
