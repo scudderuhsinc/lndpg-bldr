@@ -3,17 +3,18 @@ const groq=require('groq')
 const client=require('./sanityClient.js')
 const serializers=require('./serializers')
 
-function generatePages(landingPage) {
+function generate(ea) {
   return {
-    ...landingPage,
-    main: BlocksToMarkdown(landingPage.topCopy.body, { serializers, ...client.config() }),
-    //form: BlocksToMarkdown(landingPage.form.body, { serializers, ...client.config() }) //,
-    lftCol: BlocksToMarkdown(landingPage.teaserLft.body, { serializers, ...client.config() }),
-    rtCol: BlocksToMarkdown(landingPage.teaserRt.body, { serializers, ...client.config() })
+    ...ea,
+    main: BlocksToMarkdown(ea.main.body, { serializers, ...client.config() }),
+    t01: BlocksToMarkdown(ea.teaser01, { serializers, ...client.config() }),
+    t02: BlocksToMarkdown(ea.teaser02, { serializers, ...client.config() }),
+    t03: BlocksToMarkdown(ea.teaser03, { serializers, ...client.config() }),
+    thankyou: BlocksToMarkdown(ea.thankyou.body, { serializers, ...client.config() })
   }
 }
 
-async function getPages() {
+async function getArchived() {
   const filter=groq`*[_type == "campaign" && schedual.startDate < now()]`
   const projection=groq`{
     _id,
@@ -21,25 +22,26 @@ async function getPages() {
     description,
     active,
     schedual,
-    keywords,
+    analytics,
+    contact,
     links,
     "logoSrc": logo.logoImage.asset->url,
     "logoAlt": logo.logoImage.alt,
     "heroSrc": hero.heroImage.asset->url,
     hero,
-    topCopy,
-    form,
-    teaserLft,
-    teaserRt,
-    contact
+    main,
+    "teaser01": teasers.teaser01,
+    "teaser02": teasers.teaser02,
+    "teaser03": teasers.teaser03,
+    thankyou
   }`
   const order=`| order(schedual.startDate asc)`
   const query=[filter, projection, order].join(' ')
   const docs=await client.fetch(query).catch(err => console.error(err))
-  const preparePages=docs.map(generatePages)
+  const archivedPages=docs.map(generate)
   //console.log(`Page: `+JSON.stringify(preparePages[0]))
   //console.log(preparePages)
-  return preparePages
+  return archivedPages
 }
 
-module.exports=getPages
+module.exports=getArchived

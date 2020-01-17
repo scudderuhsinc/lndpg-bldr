@@ -21,6 +21,11 @@ export default {
       type: 'active'
     },
     {
+      name: 'analytics',
+      title: 'Analytics',
+      type: 'analytics'
+    },
+    {
       name: 'keywords',
       title: 'Keywords',
       type: 'keywords'
@@ -32,33 +37,19 @@ export default {
     },
     {
       name: 'logo',
-      title: 'Logo',
       type: 'logoImage'
     },
     {
       name: 'hero',
-      title: 'Page Hero',
       type: 'hero'
     },
     {
-      name: 'topCopy',
-      title: 'Top Copy',
-      type: 'topCopy'
+      name: 'main',
+      type: 'main'
     },
     {
-      name: 'form',
-      title: 'Form',
-      type: 'form'
-    },
-    {
-      name: 'teaserLft',
-      title: 'Teaser Left',
-      type: 'teaserLft'
-    },
-    {
-      name: 'teaserRt',
-      title: 'Teaser Right',
-      type: 'teaserRt'
+      name: 'teasers',
+      type: 'teasers'
     },
     {
       name: 'contact',

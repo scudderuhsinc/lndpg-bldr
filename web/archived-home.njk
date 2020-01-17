@@ -5,20 +5,22 @@ templateClass: home
 tags: home
 pagination:
   alias: page
-  data: pages
+  data: archived
   size: 1
 eleventyExcludeFromCollections: true
-permalink: "/{{ page.links.local | slug }}/index.html"
+permalink: "{{ page.links.local | slug }}/_archived/index.html"
 ---
 <div id="form" class="container-inner_col content-container">
 
-    <div class="grid-row top-copy">
-      <div class="left-col">
+    <div class="grid-row main-container">
+      <div class="grid-1-1">
         {{ page.main | markdownify | safe }}
       </div>
-      <div class="right-col">
-          <div class="form-container">
-            <h3>{{ page.description }}</h3>
+    </div>
+    
+    <div class="grid-row form-container">
+      <div class="grid-1-1">
+          <div class="form-wrapper">
             <p class="instructions">To learn more, fill out the form below and we’ll respond within one business day, or call <a href="tel:{{ page.contact.phone }}">{{ page.contact.phone }}</a>.
             <form name="contact" method="POST" data-netlify="true" action="thankyou.html">
               <p>
@@ -56,13 +58,25 @@ permalink: "/{{ page.links.local | slug }}/index.html"
       </div>
     </div>
 
-    <div class="grid-row teaser-copy">
-      <div class="left-col">
-        {{ page.lftCol | markdownify | safe }}
-      </div>
-      <div class="right-col">
-        {{ page.rtCol | markdownify | safe }}
-      </div>
+    <div class="grid-row teasers-container">
+      {% if page.t03 | length > 0 %}
+        <div class="teaser-col grid-1-3">
+          {{ page.t01 | markdownify | safe }}
+        </div>
+        <div class="teaser-col grid-1-3">
+          {{ page.t02 | markdownify | safe }}
+        </div>
+        <div class="teaser-col grid-1-3">
+          {{ page.t03 | markdownify | safe }}
+        </div>
+      {% else %}
+        <div class="teaser-col grid-1-2">
+          {{ page.t01 | markdownify | safe }}
+        </div>
+        <div class="teaser-col grid-1-2">
+          {{ page.t02 | markdownify | safe }}
+        </div>
+      {% endif %}
     </div>
 
 </div>

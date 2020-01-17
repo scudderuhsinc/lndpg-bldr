@@ -6,25 +6,21 @@ export default {
         {
             name: 'title',
             type: 'string',
-            title: 'Hero Title',
-            description: 'Hero title',
             options: {
                 maxLength: 96
             }
         },
         {
             name: 'subtitle',
+            title: `Subtitle, This text will follow the title in the Hero`,
             type: 'string',
-            title: 'Hero Subtitle',
-            description: 'This text will follow the title in the Hero',
             options: {
                 maxLength: 140
             }
         },
         {
             name: 'heroImage',
-            title: 'Hero image',
-            description: `This will be the campaign page's hero image.`,
+            title: `This image will be the campaign hero background image.`,
             type: 'mainImage'
         }
     ],

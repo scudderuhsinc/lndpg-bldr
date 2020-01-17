@@ -77,6 +77,10 @@ yarn.lock
 
 # Static site
 _sites/*
+_campaigns/*
+_current/*
+_prev/*
+_next/*
 
 # Development Notes
 # use blog-bldr/README.md for public readme file

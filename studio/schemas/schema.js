@@ -6,17 +6,16 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
 import active from './documents/active'
+import analytics from './documents/analytics'
 import campaign from './documents/campaign'
 import contact from './documents/contact'
 import links from './documents/links'
 import logoImage from './documents/logoImage'
-import form from './documents/form'
 import hero from './documents/hero'
 import keywords from './documents/keywords'
-import teaserLft from './documents/teaserLft'
-import teaserRt from './documents/teaserRt'
+import main from './documents/main'
+import teasers from './documents/teasers'
 import thankyou from './documents/thankyou'
-import topCopy from './documents/topCopy'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -32,19 +31,18 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     active,
+    analytics,
+    bodyPortableText,
     campaign,
     contact,
-    links,
-    logoImage,
-    bodyPortableText,
-    form,
     hero,
     keywords,
+    links,
+    logoImage,
+    main,
     mainImage,
-    teaserLft,
-    teaserRt,
-    thankyou,
-    topCopy
+    teasers,
+    thankyou
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
