@@ -270,6 +270,47 @@ header a.phone:hover{
 }
 
 /*
+ * Awards Styles
+ */
+ /* .awards-container { 
+   margin-bottom: 45px;
+ } */
+ /* .award-wrapper { */
+.awards-container {
+  background-color: #f7f7f7;
+  margin: 0;
+ }
+.award {
+  padding: 0 20px;
+  margin: 0 0 20px;
+}
+.award:last-of-type {
+  margin-bottom: 0;
+}
+.awarded-by-seal,
+.awarded-by {
+  display: flex;
+}
+.awarded-by {
+  flex-direction: column;
+}
+.award,
+.awarded-by-seal,
+.awarded-by {
+  justify-content: center;
+  align-items: center;
+}
+.awarded-by h4 {
+  font-size: 42px;
+  font-weight: 400;
+  color: rgb(77, 77, 77);
+  margin: 20px 0 5px;
+}
+.awarded-by p {
+  color: rgb(77, 77, 77);
+  margin: 5px 0 20px;
+}
+/*
  * CTA Band Styles
  */
 .cta-band_call {
