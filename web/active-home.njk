@@ -18,98 +18,45 @@ permalink: "{{ page.links.local | slug }}/index.html"
       </div>
     </div>
 
+    <!-- formcarry - test form -->
+
     <div class="grid-row form-container">
       <div class="grid-1-1">
-        <div class="form-wrapper">
-          <p class="instructions">To learn more, fill out the form below and we’ll respond within one business day, or call <a href="tel:{{ page.contact.phone }}">{{ page.contact.phone }}</a>.
-          <form method="POST" action="https://texomamedicalcenter.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form  _dark" novalidate="">
-            <input type="hidden" name="u" value="1" data-name="u">
-            <input type="hidden" name="f" value="1" data-name="f">
-            <input type="hidden" name="s" data-name="s">
-            <input type="hidden" name="c" value="0" data-name="c">
-            <input type="hidden" name="m" value="0" data-name="m">
-            <input type="hidden" name="act" value="sub" data-name="act">
-            <input type="hidden" name="v" value="2" data-name="v">
-            <div class="_form-content">
-              <div class="_form_element _x13571685 _full_width ">
-                <label class="_form-label">
-                  First Name*
+          <div class="form-wrapper">
+            <p class="instructions">To learn more, fill out the form below and we’ll respond within one business day, or call <a href="tel:{{ page.contact.phone }}">{{ page.contact.phone }}</a>.
+            <form action="https://formcarry.com/s/gSD-bZ_eB_O" method="POST" accept-charset="UTF-8" >
+              <p>
+                <label>First Name:<br>
+                <input type="text" name="firstName" required /></label>   
+              </p>
+              <p>
+                <label>Last Name:<br>
+                <input type="text" name="lastName" required /></label>   
+              </p>
+              <p>
+                <label>Phone Number:<br>
+                <input type="tel" name="phone" required /></label>
+              </p>
+              <p>
+                <label>Email Address:<br>
+                <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>
+                  How would you like to be contacted?<br>
+                  <input type="radio" name="followup" value="email" required> Email<br>
+                  <input type="radio" name="followup" value="call" checked> Phone Call<br>
                 </label>
-                <div class="_field-wrapper">
-                  <input type="text" name="firstname" placeholder="Type your first name" required="" data-name="firstname">
-                </div>
-              </div>
-              <div class="_form_element _x02639197 _full_width ">
-                <label class="_form-label">
-                  Last Name*
-                </label>
-                <div class="_field-wrapper">
-                  <input type="text" name="lastname" placeholder="Type your last name" required="" data-name="lastname">
-                </div>
-              </div>
-              <div class="_form_element _x38389092 _full_width ">
-                <label class="_form-label">
-                  Phone*
-                </label>
-                <div class="_field-wrapper">
-                  <input type="text" name="phone" placeholder="Type your phone number" required="" data-name="phone">
-                </div>
-              </div>
-              <div class="_form_element _x54957634 _full_width ">
-                <label class="_form-label">
-                  Email*
-                </label>
-                <div class="_field-wrapper">
-                  <input type="text" name="email" placeholder="Type your email" required="" data-name="email">
-                </div>
-              </div>
-              <div class="_form_element _field2 _full_width ">
-                <label class="_form-label form-grp-hdr">
-                  How would you like to be contacted?*
-                </label>
-                <div class="_row _checkbox-radio">
-                  <input id="field_2Phone" type="radio" name="field[2]" value="Phone" required="" data-name="contact_by_me">
-                  <span>
-                    <label for="field_2Phone">
-                      Phone
-                    </label></span>
-                  </div>
-                  <div class="_row _checkbox-radio">
-                    <input id="field_2Email" type="radio" name="field[2]" value="Email" data-name="contact_by_me">
-                    <span>
-                      <label for="field_2Email">
-                        Email
-                      </label></span>
-                    </div>
-                  </div>
-                  <div class="_form_element _field3 _full_width ">
-                    <div class="_row">
-                      <label class="_form-label form-grp-hdr">
-                        Would you like to subscribe to e-mail updates from {{ page.owner }}?
-                      </label>
-                    </div>
-                    <input data-autofill="false" type="hidden" name="field[3][]" value="~|" data-name="emailsubscription">
-                    <div class="_row _checkbox-radio">
-                      <input id="field_3Yes, please subscribe me." type="checkbox" name="field[3][]" value="Yes, please subscribe me." data-name="emailsubscription">
-                      <span>
-                        <label for="field_3Yes, please subscribe me.">
-                          Please send me updates from {{ page.owner }}
-                        </label>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="_button-wrapper _full_width">
-                    <button id="_form_1_submit" class="_submit" type="submit">
-                      Request Appointment
-                    </button>
-                  </div>
-                  <div class="_clear-element">
-                  </div>
-                </div>
-                <div class="_form-thank-you" style="display:none;">
-                </div>
-              </form>
-        </div>
+              </p>
+              <p>
+                <label><input type="checkbox" name="subscribe" value="yes" checked> Please send me updates from {{ page.owner }}</label>
+              </p>
+              <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+              <p>
+                <button type="submit">Request Appointment</button>
+              </p>
+            </form>
+          </div>
       </div>
     </div>
 

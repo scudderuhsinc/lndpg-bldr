@@ -6,12 +6,9 @@
 
 # lerna files
 /lerna-debug.log
-studio/README.md
-web/README.md
+/studio/README.md
+/web/README.md
 
 # Static site
-web/_sites/*
-web/_campaigns/*
-web/_current/*
-web/_prev/*
-web/_next/*
+/web/_sites/*
+/web/_campaigns/*
