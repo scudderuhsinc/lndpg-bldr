@@ -31,9 +31,55 @@ permalink: "{{ page.links.local | slug }}/index.html"
       </div>
     </div>
 
+    <!-- kwes form -->
+    <div id="form" class="grid-row form-container">
+      <div class="grid-1-1">
+        <div class="form-wrapper">
+          <p class="instructions">To learn more, fill out the form below and we’ll respond within one business day, or call <a href="tel:{{ page.contact.phone }}">{{ page.contact.phone }}</a>.
+          <div class="kwes-form">
+            <form method="POST" action="https://kwes.io/api/foreign/forms/ONuKAM5p61wM5hXQ5IFu">
+              <p>
+                <label>First Name:<br>
+                <input type="text" name="firstName" rules="required|max:255" /></label>   
+              </p>
+              <p>
+                <label>Last Name:<br>
+                <input type="text" name="lastName" rules="required|max:255" /></label>   
+              </p>
+              <p>
+                <label>Phone Number:<br>
+                <input type="tel" name="phone" rules="required|max:255" /></label>
+              </p>
+              <p>
+                <label>Email Address:<br>
+                <input type="email" name="email" rules="required|max:255" /></label>
+              </p>
+              <p>
+                <label>
+                  How would you like to be contacted?<br>
+                  <input type="radio" name="followup" value="email" required> Email<br>
+                  <input type="radio" name="followup" value="call" checked> Phone Call<br>
+                </label>
+              </p>
+              <p>
+                <label><input type="checkbox" name="subscribe" value="yes" checked> Please send me updates from {{ page.owner }}</label>
+              </p>
+              <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+              <p>
+                <button type="submit">Request Appointment</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <input type="text" name="name" rules="required|max:255"><button type="submit">Submit</button> -->
+    <!-- END kwes form -->
+
     <!-- formcarry form -->
 
-    <div id="form" class="grid-row form-container">
+    <div class="grid-row form-container">
       <div class="grid-1-1">
           <div class="form-wrapper">
             <p class="instructions">To learn more, fill out the form below and we’ll respond within one business day, or call <a href="tel:{{ page.contact.phone }}">{{ page.contact.phone }}</a>.
