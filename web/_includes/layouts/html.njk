@@ -80,7 +80,7 @@
             <img src="https://www.uhsinc.com/wp-content/uploads/2020/01/uhs_footer-logo.png" alt="Universal Health Services, Inc." />
           </div>
           <div class="grid-5-6">
-            <p>{{ page.owner }} is owned and operated by a subsidiary of Universal Health Services, Inc. (UHS), a King of Prussia, PA-based company, that is one of the largest healthcare management companies in the nation.The information on this website is provided as general health guidelines and may not be applicable to your particular health condition. Your individual health status and any required medical treatments can only be properly addressed by a professional healthcare provider of your choice. Remember: There is no adequate substitution for a personal consultation with your physician. Neither Texoma Medical Center, or any of their affiliates, nor any contributors shall have any liability for the content or any errors or omissions in the information provided by this website.</p>
+            <p>{{ page.owner }} is owned and operated by a subsidiary of Universal Health Services, Inc. (UHS), a King of Prussia, PA-based company, that is one of the largest healthcare management companies in the nation.The information on this website is provided as general health guidelines and may not be applicable to your particular health condition. Your individual health status and any required medical treatments can only be properly addressed by a professional healthcare provider of your choice. Remember: There is no adequate substitution for a personal consultation with your physician. Neither {{ page.owner }}, or any of their affiliates, nor any contributors shall have any liability for the content or any errors or omissions in the information provided by this website.</p>
             <p>The information, content and artwork provided by this website is intended for non-commercial use by the reader. The reader is permitted to make one copy of the information displayed for his/her own non-commercial use. The making of additional copies is prohibited.</p>
             <p class="copyright">©{{ getYear }} {{ page.owner }}. All rights reserved.</p>
           </div>
@@ -88,8 +88,8 @@
       </div>
     </footer>
 
-    <!-- Current page: /{{ page.links.local | slug }}/index.html -->
-    <script src="https://kwes.io/js/kwes.js"></script>
+    <!-- Page: /{{ page.links.local | slug }}/index.html -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
