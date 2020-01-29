@@ -47,13 +47,15 @@ body footer p {
  */
 header .grid-row {
   padding: 20px 0;
+  height: 145px;
 }
 header [class^="grid-"] {
   align-items: center;
 }
 .header-logo {
   width: 300px;
-  height: 115px;
+  height: auto;
+  /* height: 115px;*/
 }
 .header-tagline {
   font-size: 24px;
@@ -94,7 +96,7 @@ header a.phone:hover{
  */
 .hero-container {
   background-color: rgba(255,255,255,0);
-  background-position: right center;
+  background-position: right top;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -354,6 +356,7 @@ header a.phone:hover{
   height: 386px;
   border:0;
 }
+
 /*
  * Footer Styles
  */
@@ -366,12 +369,96 @@ footer p.copyright {
   margin-top: 65px;
 }
 
-/*
- * Blue Footer (default)
- * -------------
- * tmc-woman
+/* Blue Theme (default)
+ * Texoma Medical Center
+ * ---------
+ * tmc
  */
-footer,
-body.tmc-women footer { background-color: #0d325a; }
-footer p,
-body.tmc-women footer p { color:#ffffff; }
+ footer,
+ [class^="tmc-"] footer { background-color: #0d325a; }
+ footer p,
+ [class^="tmc-"] footer p { color:#ffffff; }
+
+/* Aiken Regional Medical Centers
+ * ---------
+ * armc 
+ */
+[class^="armc-"] footer { background-color: #3c475a; }
+[class^="armc-"] footer p { color:rgba(255, 255, 255, 0.6); }
+
+/* Corona Regional Medical Center
+ * ---------
+ * crmc
+ */
+
+/* South Texas Healthcare System
+ * ---------
+ * stxs
+ */
+
+/* The Valley Health System
+ * ----------
+ * vhss
+ */
+
+ /* George Washington University Hospital
+ * ---------
+ * gwuh
+ */
+
+/* Temecula Valley Hospital
+ * ---------
+ * tvh
+ */
+
+
+
+/* Fort Duncan Medical Center
+ * ---------
+ * fdmc
+ */
+
+/* Northwest Texas
+ * ----------
+ * nwtx
+ */
+
+/* Doctor's Hospital Larado
+ * -----------
+ * dhl
+ */
+
+/* Lakewood Ranch Medical Center
+ * ------------
+ * lrmc
+ */
+
+/* Manatee Memorial Hospital
+ * ------------
+ * mmh
+ */
+
+/* Northern Nevada Medical Center
+ * -------------
+ * nnmc
+ */
+
+/* Palmdale Regional Medical Center
+ * -----------
+ * prmc
+ */
+
+/* Wellington Regional Medical Center
+ * -----------
+ * wrmc
+ */
+
+/* St. Mary's
+ * -----------
+ * stm
+ */
+
+/* Southwest Hospital System
+ * ------------
+ * swhs
+ */
