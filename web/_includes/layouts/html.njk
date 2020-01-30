@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.description }}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-      {# <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}"> #}
+    <meta name="robots" content="noindex">
+    <meta name="Description" content="{{ page.description }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/scudderuhsinc/UHStyles@master/beta/styles.min.css">
     {% set css %}
       {% include "style.css" %}
